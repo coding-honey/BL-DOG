@@ -47,6 +47,7 @@ chmod u+x prereqs-ubuntu.sh
 ㅡㅡㅡㅡ재부팅ㅡㅡㅡㅡ
 
 * Composer 설치
+
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install nodejs
@@ -74,12 +75,14 @@ export FABRIC_VERSION=hlfv12
 ./downloadFabric.sh
 
 * ★시작할 때★
+
 cd ~/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
 
 * ★종료할 때★
+
 cd ~/fabric-dev-servers
 ./stopFabric.sh
 ./teardownFabric.sh
@@ -101,18 +104,21 @@ https://d2fault.github.io/2018/05/02/20180502-hyperledger-composer-tutorial/
 # < How To Start >
 
 # Fabric Start
+
 cd ~/BL-DOG/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
 
 # Network Install, Start
+
 cd ~/BL-DOG
 composer network install --card PeerAdmin@hlfv1 --archiveFile tutorial-network@0.0.1.bna
 composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
 # Composer Rest Server
 // localhost:3000으로 REST Server 접근
+
 cd ~/BL-DOG
 composer-rest-server
 admin@tutorial-network
@@ -126,6 +132,7 @@ N
 
 # Angular Install, Start
 // localhost:4200으로 홈페이지 접근
+
 cd ~/BL-DOG/bldog-app
 npm install
 npm start
@@ -144,9 +151,11 @@ connection_url, database, collection 이름 정의 (1번 database, collection이
 connection_url : cluster - connection - connect your application - connection String Only 복사 
 
 # DB 연동 // mongoDB
+
 cd ~/BL-DOG/bldog-app/dbService
 nodejs server.js
 
 # Fabric Stop
+
 cd ~/BL-DOG/fabric-dev-servers
 ./stopFabric.sh
