@@ -100,9 +100,9 @@ https://d2fault.github.io/2018/05/02/20180502-hyperledger-composer-tutorial/
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-~/BL-DOG/bldog-app이라는 가정하에 작성했습니다.
 # < How To Start >
 
+~/BL-DOG/bldog-app이라는 가정하에 작성했습니다.
 # Fabric Start
 
 cd ~/BL-DOG/fabric-dev-servers
