@@ -98,21 +98,21 @@ https://d2fault.github.io/2018/05/02/20180502-hyperledger-composer-tutorial/
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-< How To Start >
-﻿~/BL-DOG/ 라는 가정하에 작성했습니다.
+#< How To Start >
+~/BL-DOG/ 라는 가정하에 작성했습니다.
 
-#1 Fabric Start
+# Fabric Start
 cd ~/BL-DOG/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
 
-#2 Network Install, Start
+# Network Install, Start
 cd ~/BL-DOG
 composer network install --card PeerAdmin@hlfv1 --archiveFile tutorial-network@0.0.1.bna
 composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
 
-#3 Composer Rest Server
+# Composer Rest Server
 // localhost:3000으로 REST Server 접근
 cd ~/BL-DOG
 composer-rest-server
@@ -125,13 +125,13 @@ Y
 Y
 N
 
-#4 Angular Install, Start
+# Angular Install, Start
 // localhost:4200으로 홈페이지 접근
 cd ~/BL-DOG/bldog-app
 npm install
 npm start
 
-#5 ATLAS - Cluster 생성, 작업
+# ATLAS - Cluster 생성, 작업
 https://www.mongodb.com/cloud/atlas 로그인 후 Clusters 생성
 
 @ ATLAS - Cluster
@@ -144,10 +144,10 @@ IP Whitelist - ADD IP ADDRESS 추가
 connection_url, database, collection 이름 정의 (1번 database, collection이름과 동일)
 connection_url : cluster - connection - connect your application - connection String Only 복사 
 
-#6 DB 연동 // mongoDB
+# DB 연동 // mongoDB
 cd ~/BL-DOG/bldog-app/dbService
 nodejs server.js
 
-#7 Fabric Stop
+# Fabric Stop
 cd ~/BL-DOG/fabric-dev-servers
 ./stopFabric.sh
