@@ -87,7 +87,7 @@ cd ~/fabric-dev-servers
 ./stopFabric.sh
 ./teardownFabric.sh
 -----------------------------------------------------------------
-#Angular test
+* Angular test
 npm install -g @angular/cli
 
 (Angular 폴더로 이동)
