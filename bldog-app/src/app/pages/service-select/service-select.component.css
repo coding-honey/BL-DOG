@@ -1,0 +1,18 @@
+.title1 {
+    font-size: 40px;
+}
+.card1 {
+    border:4px solid white;
+    background-color: rgba(255, 255, 255, 0.15);  
+}
+
+.card2 {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border:3px solid white;
+  }
+
+
+  .div1 .div2{
+    display: inline-block;
+  }

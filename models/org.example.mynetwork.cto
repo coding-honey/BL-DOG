@@ -1,0 +1,101 @@
+/**
+ * My commodity trading network
+ */
+namespace org.example.mynetwork
+
+enum Status {
+  o protect
+  o unProtected
+}
+
+asset Pet identified by petSerial {
+    o String petSerial
+    o Integer organicDate
+    o String kind
+    o String discoveryAddress
+    o String name
+    o Integer age
+    o String gender
+    o String weight
+    o String healthStatus
+    o String disease
+    o Status protectStatus
+    o String animalSpecies
+    o String description
+    o String furColor 
+    o String endProtection
+    --> Guardian guardian optional
+    --> Shelter nshelter
+}
+
+asset Guardian identified by guardianCode {
+  o String guardianCode
+  o String name
+  o String division
+  o Integer protectDate
+  o Integer phoneNum
+  o String address
+}
+
+
+participant Shelter identified by shelterId {
+    o String shelterId
+    --> DonationForm[] donationForm optional
+}
+
+transaction Trade {
+    --> Pet pet
+    --> Shelter newShelter
+}
+
+transaction ChangeGuardian {
+    --> Pet pet
+    --> Guardian guardian
+}
+
+event TradeNotification {
+  --> Pet pet
+  --> Shelter shelter
+}
+
+event ChangeNotification {
+  --> Pet pet
+  --> Guardian guardian
+}
+
+transaction petCountByShelter {
+  --> Shelter shelter
+}
+////////////////////////////////
+
+enum DonatorType{ //기부자 종류
+  o CITIZEN       //시민(일반인)
+  o GOVERNMENT    //정부
+  o ORGANIZATION  //기관, 단체
+}
+
+asset DonationForm identified by donationId{  //기부서
+  o String donationId
+  o DonatorType donatorType    //기부자 종류
+  o String donatorName          //기부자명
+  o Double donateAmount         //기부할 금액
+  --> Shelter shelter           //기부할 보호소 선택
+  o String date
+  o String phoneNum optional    //연락처
+  o String email optional       //이메일
+}
+
+transaction CreateDonation {   //기부서 생성tx
+  o String donationId
+  o DonatorType donatorType    //기부자 종류
+  o String donatorName          //기부자명
+  o Double donateAmount         //기부할 금액
+  --> Shelter shelter           //기부할 보호소 선택
+  o String date
+  o String phoneNum optional    //연락처
+  o String email optional       //이메일
+}
+
+transaction DonationSum {
+  --> Shelter shelter
+}

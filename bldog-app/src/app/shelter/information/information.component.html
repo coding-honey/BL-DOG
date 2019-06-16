@@ -1,0 +1,120 @@
+<!-- <app-info-get></app-info-get> -->
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<div class="main-content">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+      
+              <div class="card">
+                  <div class="card-header card-header-icon card-header-primary">
+                  <div class="card-icon">
+                      <i class="material-icons">pets</i>
+                  </div>
+                  <h4 class="card-title">Shleter Details-
+                      <small class="category">information about shleter</small>
+                  </h4>
+                  </div>
+      
+                  <div class="card-body">
+                      
+                      <div class="tab-content tab-space">
+                          <div class="tab-pane active" id="link1">
+                              <form [formGroup]="detailsForm">
+                                  <div class="row">
+                      
+                                      <div class="col-md-3">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">보호소 ID</label>
+                                              <input type="text" class="form-control" value="AAA"> 
+                                          </div>
+                                      </div>
+                                      
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-md-3">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">설립일</label>
+                                              <input type="text" class="form-control" value="2019-03-03">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-md-3">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">주중 오픈시간</label>
+                                              <input type="text" class="form-control" value="11:00">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">주중 마감시간</label>
+                                              <input type="text" class="form-control" value="21:00">
+                      
+                                          </div>
+                                      </div>
+                      
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">주소</label>
+                                              <input type="text" class="form-control" value="서울시 성북구 삼선교로 18길">
+                                          </div>
+                                      </div>
+                      
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">수의사 수</label>
+                                              <input type="text" class="form-control" value="10명">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">직원 수</label>
+                                              <input type="text" class="form-control" value="20명">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-md-5">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">클리님 룸</label>
+                                              <input type="text" class="form-control" value="30개">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">사육장 수 </label>
+                                              <input type="text" class="form-control" value="40개">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                              <label class="bmd-label-floating">최대 수용 가능한 수</label>
+                                              <input type="text" class="form-control" disabled="disabled" value="80마리">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <button mat-raised-button type="submit" class="btn btn-rose pull-right"
+                                      (click)="updateShelterInformation()">Update Details</button>
+                                  <div class="clearfix"></div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>

@@ -1,0 +1,327 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<div class="wrapper wrapper-full-page">
+  <div class="page-header register-page header-filter" filter-color="black"
+    style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+    <div class="container">
+
+      <!-- 검색하는 창 -->
+      <div class="row">
+        <!-- <div class="col-md-10 ml-auto mr-auto">
+          <div class="card card-signup">
+            <h2 class="card-title text-center">기부내역 확인하기</h2>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-5 ml-auto">
+
+                  <div class="social text-center">
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-twitter">
+                      <i class="fa fa-twitter"></i>
+                    </button>
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-dribbble">
+                      <i class="fa fa-dribbble"></i>
+                    </button>
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-facebook">
+                      <i class="fa fa-facebook"> </i>
+                    </button>
+                    <h4 class="mt-3"> or be classical </h4>
+                  </div>
+                  <form class="form" method="" action="">
+
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">face</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="날짜">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="보호소 명">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="기부할 금액">
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="col-md-5 mr-auto">
+                  <form class="form" method="" action="">
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">face</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="기부자 종류">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="기부자명">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="기부할 금액">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="연락처">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="이메일">
+                      </div>
+                    </div>
+                    <div class="text-right" height="20px">
+                      <button routerLink="/pages/donation-code" class="btn btn-primary btn-round mt-6"> SUBMIT
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+        <div class="col-md-10 ml-auto mr-auto">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title"> 기부 내역 검색 -
+                <small class="description"> 부여받은 기부서 코드를 입력하세요</small>
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="tab-content tab-space">
+                <form [formGroup]="donationCodeResearchForm">
+                  <div class="row text-center" style="padding-left:75px">
+                    <label class="col-sm-2 col-form-label">기부서 코드</label>
+                    <div class="col-sm-7">
+                      <input type="text" formControlName="donationFormId" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <!-- <div class="row text-center" style="padding-left:75px">
+                            <label class="col-sm-2 col-form-label">기부서 코드</label>
+                              <div class="col-sm-7">
+                                <mat-form-field class="example-full-width has-label">
+                                  <input type="text" matInput id="text" disabled="disabled">
+                                </mat-form-field>
+                              </div>
+                          </div> -->
+
+                  <div class="text-center" height="25px" style="padding-top:30px">
+                    <button (click)="getDonationDetails(donationId);" class="btn btn-primary btn-round mt-6">확인
+                    </button>
+                    <button routerLink="/pages/serviceSelect" class="btn btn-primary btn-round mt-6">메인으로 돌아가기 </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기부한 보호소의 기부 전체 목록 -->
+      <div class="row">
+        <div class="col-md-10 ml-auto mr-auto">
+
+          <div class="card">
+            <div class="card-header card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">기부목록</h4>
+              </div>
+            </div>
+            <div class="card-body table-responsive">
+              <h4>해당 기부 이력</h4>
+              <form [formGroup]="donationForm">
+                <div class="row">
+
+
+                  <!-- 아이디 -->
+                  <div class="col-md-2"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">donationId</label>
+                          <input formControlName="donationId" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+
+
+                  <!-- 날짜  -->
+                  <div class="col-md-2"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">date</label>
+                          <input formControlName="date" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+
+                  <!-- 기부 보호소 -->
+                  <div class="col-md-2"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">shelter</label>
+                          <input formControlName="shelter" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+
+                  <!-- 금액 -->
+                  <div class="col-md-2"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">donateAmount</label>
+                          <input formControlName="donateAmount" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+                  
+                  <!-- 기부자 종류 -->
+                  <div class="col-md-2"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">donatorType</label>
+                          <input formControlName="donatorType" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+
+                  <!-- 기부자 이름 -->
+                  <div class="col-md-1"> 
+                      <div class="form-group">
+                          <label class="bmd-label-floating">donatorName</label>
+                          <input formControlName="donatorName" type="text" class="form-control" disabled="disabled">
+                      </div>
+                  </div>
+
+                </div>
+
+              </form>
+              <hr> <br><br>
+
+              
+              <table class="table table-responsive">
+                <thead class="thead">
+                  <tr class="thead-cols">
+
+                    <th class="info">donationId</th>
+
+                    <th class="info">donatorType</th>
+
+                    <th class="info">donatorName</th>
+
+                    <th class="info">donateAmount</th>
+
+                    <th class="info">shelter</th>
+
+                    <th class="info">date</th>
+
+                    <th class="info">phoneNum</th>
+
+                    <th class="info">email</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let asset of allAssets">
+        
+                    
+                        <td class="asset-properties">{{asset.donationId}}</td>
+                    
+                        <td class="asset-properties">{{asset.donatorType}}</td>
+                    
+                        <td class="asset-properties">{{asset.donatorName}}</td>
+                    
+                        <td class="asset-properties">{{asset.donateAmount}}</td>
+                    
+                        <td class="asset-properties">{{asset.shelter}}</td>
+                    
+                        <td class="asset-properties">{{asset.date}}</td>
+                    
+                        <td class="asset-properties">{{asset.phoneNum}}</td>
+                    
+                        <td class="asset-properties">{{asset.email}}</td>
+                    
+                  </tr>
+                </tbody>
+
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer ">
+      <div class="container">
+        <nav class="pull-left">
+          <ul>
+            <li>
+              <a href="https://www.creative-tim.com">
+                Creative Tim
+              </a>
+            </li>
+            <li>
+              <a href="https://creative-tim.com/about-us">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.creative-tim.com">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="https://www.creative-tim.com/license">
+                Licenses
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy;
+          {{test | date: 'yyyy'}}, made with <i class="material-icons">favorite</i> by
+          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

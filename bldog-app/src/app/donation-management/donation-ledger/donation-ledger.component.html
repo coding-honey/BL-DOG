@@ -1,0 +1,68 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-icon">
+              <i class="material-icons">assignment</i>
+            </div>
+            <h4 class="card-title">Transaction list</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+
+                  <tr>
+                      <th class="info">transactionId</th>
+
+                      <th class="info">transactionType</th>
+
+                      <th class="info">transactionInvoked</th>
+
+                      <th class="info">participantInvoking</th>
+
+                      <th class="info">identityUsed</th>
+
+                      <th class="info">eventsEmitted</th>
+
+                      <th class="info">transactionTimestamp</th>
+
+                  </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let asset of allAssets" class="animal-list-table-tr" id={asset.petSerial}
+                    (click)="getAnimalDetails(asset.petSerial)">
+
+                    <td class="asset-properties">{{asset.transactionId}}</td>
+
+                    <td class="asset-properties">{{asset.transactionType}}</td>
+
+                    <td class="asset-properties">{{asset.transactionInvoked}}</td>
+
+                    <td class="asset-properties">{{asset.participantInvoking}}</td>
+
+                    <td class="asset-properties">{{asset.identityUsed}}</td>
+
+                    <td class="asset-properties">{{asset.eventsEmitted}}</td>
+
+                    <td class="asset-properties">{{asset.transactionTimestamp}}</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

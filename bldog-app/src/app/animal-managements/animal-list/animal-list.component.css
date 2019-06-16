@@ -1,0 +1,10 @@
+.animal-list-table-tr:hover{
+    /* color:#fff; */
+	border:1px solid rgb(223, 218, 216);
+	background-color:rgb(165, 159, 157);
+}
+/* table{
+    margin:0px;
+    padding:0px;
+}
+ */

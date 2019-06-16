@@ -1,0 +1,44 @@
+/** Sample queries for Commodity Trading business network
+*/
+
+query selectCommodities {
+  description: "Select all commodities"
+  statement:
+      SELECT org.example.mynetwork.Pet
+}
+
+query selectCommoditiesByShelter {
+  description: "Select all pet based on their Shelter"
+  statement:
+      SELECT org.example.mynetwork.Pet
+          WHERE (nshelter == _$nshelter)
+}
+
+query allPet {
+  description: "Select all pet "
+  statement:
+      SELECT org.example.mynetwork.Pet
+          
+}
+
+query selectStatus {
+  description: "Select Status"
+  statement:
+      SELECT org.example.mynetwork.Pet
+          WHERE ((protectStatus == _$protectStatus) AND (nshelter == _$nshelter)) 
+}
+
+query least {
+  description: "pet data"
+  statement:
+      SELECT org.example.mynetwork.Pet
+          WHERE (nshelter == _$nshelter)
+              ORDER BY [organicDate DESC]
+}
+
+query donationListByShelter {
+  description: "DonationForm List by Shelter"
+  statement:
+  	SELECT org.example.mynetwork.DonationForm
+      WHERE (shelter == _$shelter)
+}

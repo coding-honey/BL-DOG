@@ -1,0 +1,129 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  </head>
+  <div class="wrapper wrapper-full-page">
+    <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="card card-signup">
+              <h4 class="card-title text-center">동물 보호소에 기부가 완료되었습니다!</h4>
+              <div class="card-body">
+                <div class="row" style="text-align: center">
+
+                  <!-- <div class="col-md-5 ml-auto">
+                    <div class="info info-horizontal">
+                      <div class="icon icon-rose">
+                        <i class="material-icons">timeline</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Marketing</h4>
+                        <p class="description">
+                          We've created the marketing campaign of the website. It was a very interesting collaboration.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-primary">
+                        <i class="material-icons">code</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Fully Coded in HTML5</h4>
+                        <p class="description">
+                          We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-info">
+                        <i class="material-icons">group</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Built Audience</h4>
+                        <p class="description">
+                          There is also a Fully Customizable CMS Admin Dashboard for this product.
+                        </p>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="col-1"></div> -->
+                  <div class="col .ml-md-auto" style="display:inline-block">
+                    <div class="social text-center">
+                      <button mat-raised-button class="btn btn-just-icon btn-round btn-twitter">
+                        <i class="fa fa-twitter"></i>
+                      </button>
+                      <button mat-raised-button class="btn btn-just-icon btn-round btn-dribbble">
+                        <i class="fa fa-dribbble"></i>
+                      </button>
+                      <button mat-raised-button class="btn btn-just-icon btn-round btn-facebook">
+                        <i class="fa fa-facebook"> </i>
+                      </button>
+                      <h4 class="mt-3"> 기부 코드로 내역을 확인하세요. </h4>
+                    </div>
+
+                    <form [formGroup]="donationCodeForm">
+                      <div class="row text-center" style="padding-left:75px">
+                          <label class="col-sm-2 col-form-label">기부 보호소</label>
+                            <div class="col-sm-7">
+                                <input type="text" formControlName="shelter" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row text-center" style="padding-left:75px">
+                            <label class="col-sm-2 col-form-label">기부서 코드</label>
+                              <div class="col-sm-7">
+                                  <input type="text"  formControlName="donationId" type="text" class="form-control">
+                              </div>
+                          </div>
+                      
+                     
+                      <div class="text-center" height="25px" style="padding-top:30px">
+                          <button routerLink="/pages/serviceSelect" class="btn btn-primary btn-round mt-6">메인으로 돌아가기 </button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- <div class="col-1"></div> -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="container">
+          <nav class="pull-left">
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="https://creative-tim.com/about-us">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://www.creative-tim.com/license">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright pull-right">
+            &copy;
+          {{test | date: 'yyyy'}}, made with <i class="material-icons">favorite</i> by
+            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  

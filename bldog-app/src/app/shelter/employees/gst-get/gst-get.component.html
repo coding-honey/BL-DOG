@@ -1,0 +1,65 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                            <i class="material-icons">pets</i>
+                        </div>
+                        <h4 class="card-title ">Employee List</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td> 이름 </td>
+                                        <td> 직책 </td>
+                                        <td> 담당업무 </td>
+                                        <td> 연락처 </td>
+                                        <td> 이메일 </td>
+                                        <td> 입사일 </td>
+                                        <td colspan="2">Actions</td>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr *ngFor="let business of businesses">
+                                        <td>{{ business.person_name }}</td>
+                                        <td>{{ business.business_name }}</td>
+                                        <td>{{ business.business_gst_duty }}</td>
+                                        <td>{{ business.business_gst_number }}</td>
+                                        <td>{{ business.business_gst_email }}</td>
+                                        <td>{{ business.business_gst_date }}</td>
+                                        <td><a [routerLink]="['business/edit', business._id]"  class="btn btn-primary">Edit</a>
+                                            <button (click)="deleteBusiness(business._id)" class="btn btn-danger"> 
+                                                Delete
+                                            </button>
+                                        </td>
+                                        <!-- <a routerLink="/shelter/employees" class="nav-link" routerLinkActive="active" class="text-right"> -->
+                                    </tr>
+                                </tbody>
+
+                                <tr>
+                                    <td colspan="6"></td>
+                                    <td colspan="2" class="text-right">
+                                        <ul class="nav-item">
+                                            <a routerLink="business/create" class="nav-link" routerLinkActive="active"
+                                                class="text-right">
+                                                <button class="btn btn-primary"> 직원 추가</button>
+                                            </a>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
