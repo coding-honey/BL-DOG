@@ -21,22 +21,22 @@ Version, Script, Dependency 관리
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-﻿< Composer 개발환경 셋팅 >
+# < Composer 개발환경 셋팅 >
 
-# Composer용 개발환경 정리된 사이트
+* Composer용 개발환경 정리된 사이트
 https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html#ubuntu
 
-# Ubuntu 16.04.5 LTS (Xenial Xerus) .iso 다운로드
+* Ubuntu 16.04.5 LTS (Xenial Xerus) .iso 다운로드
 http://releases.ubuntu.com/xenial/ubuntu-16.04.5-desktop-amd64.iso
 
-# VMware Workstation 15 Player 다운로드
+* VMware Workstation 15 Player 다운로드
 https://www.vmware.com/go/getplayer-win
 enhanced keyboard 체크
 
-# VMware 15에 Ubuntu 설치할 때 참고
+* VMware 15에 Ubuntu 설치할 때 참고
 https://recipes4dev.tistory.com/111
 
-# composer 설치 전 요구 사항 ( 사이트 참고 )
+* composer 설치 전 요구 사항 ( 사이트 참고 )
 https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html#ubuntu
 
 sudo apt-get install curl
@@ -46,14 +46,14 @@ chmod u+x prereqs-ubuntu.sh
 ./prereqs-ubuntu.sh
 ㅡㅡㅡㅡ재부팅ㅡㅡㅡㅡ
 
-# Composer 설치
+* Composer 설치
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install nodejs
 sudo apt-get install npm
 ㅡㅡㅡㅡ재부팅ㅡㅡㅡㅡ
 
-# Installing the development environment ( 참고 )
+* Installing the development environment ( 참고 )
 https://hyperledger.github.io/composer/latest/installing/development-tools.html
 
 sudo apt-get update
@@ -73,13 +73,13 @@ cd ~/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./downloadFabric.sh
 
-# ★시작할 때★
+* ★시작할 때★
 cd ~/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
 
-# ★종료할 때★
+* ★종료할 때★
 cd ~/fabric-dev-servers
 ./stopFabric.sh
 ./teardownFabric.sh
@@ -91,15 +91,14 @@ npm install -g @angular/cli
 npm install
 npm start
 ------------------------------------------------------------------
-# Composer 튜토리얼 실습
+* Composer 튜토리얼 실습
 https://d2fault.github.io/2018/05/02/20180502-hyperledger-composer-tutorial/
 
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-
-#< How To Start >
-~/BL-DOG/ 라는 가정하에 작성했습니다.
+~/BL-DOG/bldog-app이라는 가정하에 작성했습니다.
+# < How To Start >
 
 # Fabric Start
 cd ~/BL-DOG/fabric-dev-servers
