@@ -37,7 +37,7 @@
     "@angular/platform-browser-dynamic": "^7.2.10",
     "@angular/platform-server": "7.2.10",
     "@angular/router": "^7.2.10",
-    "ajv": "6.3.0",
+    "ajv": "6.12.3",
     "angular-calendar": "^0.26.4",
     "animate.css": "3.5.2",
     "arrive": "2.3.1",
